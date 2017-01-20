@@ -1,6 +1,6 @@
 post_install() {
     info "post install"
-    pushd "$PEARL_PKDIR/pkg_files"
+    pushd "$PEARL_PKDIR/packages"
     for x in `ls ./`
     do
         guix package -f "$x"
