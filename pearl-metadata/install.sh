@@ -1,9 +1,14 @@
 post_install() {
-    info "NYI"
+    info "post install"
+    pushd "$PEARL_PKDIR/pkg_files"
+    for x in `ls ./`
+    do
+        guix package -f "$x"
+    done
 }
 
 pre_update() {
-    info "NYI"
+    info "post update"
 }
 
 post_update() {
